@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<?php require("../html_head.php") ?>
+	<meta charset="UTF-8">
+	<title>Test Site</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
-	<div>
-		<?php require("../header.php") ?>
-		<?php require("../sidebar.php") ?>
 		<div class="container">
 		  <h2>로그인</h2>
 		  <form action="login.php" method="post">
@@ -21,7 +20,5 @@
 		    <button type="submit" class="btn btn-primary">Login</button>
 		  </form>
 		</div>
-		<?php require("../footer.php") ?>
-	</div>
 </body>
 </html>
