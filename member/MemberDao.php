@@ -13,7 +13,7 @@
 		}
 		public function getMember($id){
 			try{
-				$sql = "select * from tutomember where id = :id";
+				$sql = "select * from member where id = :id";
 				/*
 				준비하다, 실행준비, DB서버가...
 				1. 문법검사
@@ -32,7 +32,7 @@
 		}
 		public function insertMember($id, $pw, $name){
 			try{
-				$sql = "insert into tutomember values(:id, :pw, :name)";
+				$sql = "insert into member values(:id, :pw, :name)";
 
 				$pstmt = $this->db->prepare($sql);
 				$pstmt->bindValue(":id", $id, PDO::PARAM_STR);
@@ -46,7 +46,7 @@
 
 		public function updateMember($id, $pw, $name){
 			try{
-				$sql = "update tutomember set pw=:pw, name=:name where id=:id";
+				$sql = "update member set pw=:pw, name=:name where id=:id";
 
 				$pstmt = $this->db->prepare($sql);
 				$pstmt->bindValue(":pw", $pw, PDO::PARAM_STR);

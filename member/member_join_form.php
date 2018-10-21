@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<title>Test Site</title>
-	<link rel="stylesheet" href="css/bootstrap.css">
+	<?php require("../html_head.php") ?>
 </head>
 <body>
+	<div>
+		<?php require("../header.php") ?>
+		<?php require("../sidebar.php") ?>
 		<div class="container">
 		  <h2>회원가입</h2>
 		  <p>회원가입을 위해 아래의 모든 정보를 작성해 주세요.</p>
@@ -25,6 +26,8 @@
 		    <button type="submit" class="btn btn-primary">회원가입</button>
 		  </form>
 		</div>
+		<?php require("../footer.php") ?>
+	</div>
 		
 </body>
 </html>

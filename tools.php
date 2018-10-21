@@ -1,5 +1,6 @@
 <?php
-	define("MAIN_PAGE", "main.php");
+	define("MAIN_PAGE", "/php/tuto/index.php");
+	define("MEMBER_PATH", "/php/tuto/member");
 
 	function requestValue($arg){
 		return isset($_REQUEST["$arg"])?$_REQUEST["$arg"]:"";
@@ -11,6 +12,14 @@
 
 	function errorBack($msg){
 		
+		// echo "<script>
+		// 			    alert('", $msg, "');
+		// 			    location.href = 'member_joinform.php';
+		// 	     </script>";
+		// 	     <script>
+		// 		    	alert(이미 사용중인 아이디 입니다.);
+		// 			    location.href = 'member_joinform.php';
+		// 	     </script>;
 	?>
 		<script>
 			alert('<?= $msg ?>');
