@@ -14,7 +14,7 @@
 
 		public function getMsg($num){
 			try{
-				$sql = "select * from board num where num = :num";
+				$sql = "select * from board where num = :num";
 
 				$pstmt = $this->db->prepare($sql);
 				$pstmt->bindValue(":num", $num, PDO::PARAM_STR);
@@ -42,12 +42,6 @@
 
 		public function getManyMsgs($start, $rows){
 			try{
-				/*
-				준비하다, 실행준비, DB서버가...
-				1. 문법검사
-				2. 유효성검사
-				3. 실행계획 수립
-				*/
 				$sql = "select * from board order by num desc limit :start, :rows";
 				
 				$pstmt = $this->db->prepare($sql);
@@ -60,14 +54,8 @@
 				exit($e->getMessage());
 			}
 			return $msgs;
-		}
+		}		
 		public function insertMsg($title, $writer, $content, $id){
-			/*
-				sql문 만들고 insert문
-				prepare 시키고
-				넘어온 값 binding 시키고
-				실행요청하고
-			*/
 			try{
 				$sql = "insert into board(title, writer, content, id) values(:title, :writer, :content, :id)";
 
