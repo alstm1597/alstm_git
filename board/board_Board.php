@@ -118,7 +118,12 @@
 						<a href="<?= bdUrl("board_Board.php", 0, $numPages) ?>">>></a>
 					<?php endif ?>
 				<?php endif ?>
+				<form action="board_Search.php" method="post">
+					<input type="text" id="search" name="search">
+					<input type="submit" value="검색">
+				</form>
 			</div>
+
 		</div>
 		<?php require("../footer.php") ?>
 </body>
